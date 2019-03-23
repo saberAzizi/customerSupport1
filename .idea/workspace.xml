@@ -45,6 +45,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -72,9 +73,16 @@
         <option value="$PROJECT_DIR$/sql.sql" />
         <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/saber/site/model/Attachment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/saber/site/model/MyTicket.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/saber/site/model/TicketComment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/saber/site/model/UserPrincipal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/saber/site/model/MyTicket.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/saber/site/repositories/SearchableRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/saber/site/repositories/TicketRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/saber/site/repositories/SearchResult.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/saber/site/repositories/TicketRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/saber/site/repositories/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/saber/site/repositories/AttachmentRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/saber/site/repositories/TicketCommentRepository.java" />
       </list>
     </option>
   </component>
@@ -201,7 +209,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="saber" type="462c0819:PsiDirectoryNode" />
               <item name="site" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -323,12 +331,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553352557846</updated>
-      <workItem from="1553352559534" duration="7362000" />
+      <workItem from="1553352559534" duration="10181000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="7372000" />
+=======
+    <option name="totallyTimeSpent" value="10181000" />
+>>>>>>> master
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -549,6 +561,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/saber/site/model/MyTicket.java">
+<<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1722">
           <caret line="82" column="34" lean-forward="false" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
@@ -565,9 +578,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/saber/site/model/TicketComment.java">
+=======
+>>>>>>> master
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        <state relative-caret-position="1722">
+          <caret line="82" column="34" lean-forward="false" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -763,10 +778,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/saber/site/model/MyTicket.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saber/site/model/TicketComment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1387">
-          <caret line="82" column="34" lean-forward="false" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
+        <state relative-caret-position="147">
+          <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saber/site/repositories/TicketCommentRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="74" lean-forward="false" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saber/site/repositories/SearchResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saber/site/repositories/SearchableRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="66" lean-forward="false" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saber/site/repositories/AttachmentRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saber/site/repositories/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="50" lean-forward="false" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saber/site/repositories/TicketRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/saber/site/repositories/TicketRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="33" />
           <folding />
         </state>
       </provider>
