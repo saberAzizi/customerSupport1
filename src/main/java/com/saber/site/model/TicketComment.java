@@ -76,4 +76,8 @@ public class TicketComment implements Serializable {
     public void setUserPrincipal(UserPrincipal userPrincipal) {
         this.userPrincipal = userPrincipal;
     }
+
+    public void addAttachment(Attachment attachment){
+        this.attachments.add(attachment);
+    }
 }

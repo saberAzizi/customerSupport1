@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.View;
 import org.springframework.web.servlet.view.RedirectView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -27,7 +28,11 @@ public class AuthenticationController {
     public void setAuthenticationService(AuthenticationService authenticationService) {
         this.authenticationService = authenticationService;
     }
-
+    @GetMapping(value = "logout")
+    public View logout(HttpSession session){
+        session.invalidate();
+        return new RedirectView("/ticket/list",true,false);
+    }
     @GetMapping(value = "login")
     public String login(Map<String,Object> model){
         model.put("loginForm",new LoginForm());

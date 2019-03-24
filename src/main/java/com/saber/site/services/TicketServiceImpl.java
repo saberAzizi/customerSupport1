@@ -10,6 +10,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.security.Principal;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -45,18 +47,23 @@ public class TicketServiceImpl implements TicketService {
     @Override
     @Transactional
     public Page<TicketComment> getComments(MyTicket ticket, Pageable pageable) {
-        return this.ticketCommentRepository.findALLByTicket(ticket,pageable);
+        return this.ticketCommentRepository.findByTicket(ticket,pageable);
     }
 
     @Override
     @Transactional
-    public void saveTicketComment(TicketComment ticketComment, MyTicket ticket) {
-        if (ticketComment.getId()<1){
-            ticketComment.setTicket(ticket);
-            ticketComment.setDateCreated(new Date());
+    public void saveTicketComment(TicketComment ticketComment, MyTicket ticket, Principal principal) {
+       try {
+           if (ticketComment.getId()<1){
+               ticketComment.setTicket(ticket);
+             ticketComment.setDateCreated(new Date());
+             ticketComment.setUserPrincipal(this.userRepository.findByUsername(principal.getName()));
+           }
+           this.ticketCommentRepository.save(ticketComment);
+       }catch (Exception ex){
+           ex.printStackTrace();
+       }
 
-        }
-        this.ticketCommentRepository.save(ticketComment);
     }
 
     @Override
@@ -98,5 +105,12 @@ public class TicketServiceImpl implements TicketService {
     public Attachment findAttachment(long attachmentId) {
         Optional<Attachment> attachmentOptional = this.attachmentRepository.findById(attachmentId);
         return attachmentOptional.orElse(null);
+    }
+
+    @Override
+    @Transactional
+    public UserPrincipal findUserByUsername(String username) {
+       return this.userRepository.findByUsername(username);
+
     }
 }

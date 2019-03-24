@@ -30,7 +30,7 @@
     clear: both;
 }
 .content{
-    width:400px ;
+    width:500px ;
     padding: 15px;
 }
 .errorForm nav ul {
@@ -55,6 +55,6 @@ tr:nth-child(odd){
 ul{
     list-style-type: none;
 }
-
-
-
+.error{
+    color: red;
+}

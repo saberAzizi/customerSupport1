@@ -17,7 +17,11 @@
                     <c:forEach items="${tickets}" var="ticket">
                         <tr>
                             <td>${ticket.userPrincipal.username}</td>
-                            <td>${ticket.subject}</td>
+                            <td>
+                            <a href="<c:url value="/ticket/viewTicket">
+                            <c:param name="ticketId" value="${ticket.id}"/>
+                        </c:url> "> ${ticket.subject}</a>
+                            </td>
                             <td><fmt:formatDate value="${ticket.dateCreated}" pattern="yyyy/MM/dd HH:mm:ss"/> </td>
                             <td><c:forTokens items="${ticket.body}" delims="." var="msg">
                                 ${msg}<br/>
