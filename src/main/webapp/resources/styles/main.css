@@ -1,0 +1,22 @@
+.navigationBar nav ul {
+    list-style-type: none;
+}
+.navigationBar nav ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+.navigationBar nav ul li a {
+    display: block;
+    padding: 10px;
+    background-color: chocolate;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.navigationBar nav ul li a:hover{
+    background-color: darkblue;
+    color: red;
+
+}
+
