@@ -28,6 +28,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="" />
         <datasource-mapping>
+          <factory-entry name="entityManagerFactoryBean" />
           <factory-entry name="saberPersistence" value="3d04f774-74ae-42a6-8797-d66f96a4e0f5" />
         </datasource-mapping>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/META-INF/persistence.xml" />
