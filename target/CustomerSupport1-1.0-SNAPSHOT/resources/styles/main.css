@@ -37,4 +37,24 @@
     list-style-type: none;
 }
 
+table{
+    border: 2px solid black;
+
+}
+td , th {
+ padding: 10px;
+}
+tr:nth-child(even){
+    background-color: aqua;
+    color: black;
+}
+tr:nth-child(odd){
+    background-color: #a4d7a1;
+    color: black;
+}
+ul{
+    list-style-type: none;
+}
+
+
 

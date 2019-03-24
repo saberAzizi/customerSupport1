@@ -65,7 +65,7 @@ public class MyTicket implements Serializable {
         this.dateCreated = dateCreated;
     }
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     public UserPrincipal getUserPrincipal() {
         return userPrincipal;

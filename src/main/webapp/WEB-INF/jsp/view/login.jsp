@@ -13,17 +13,20 @@
     </c:if>
     <div >
         <c:url value="/login" var="login"/>
+
         <form:form method="post" modelAttribute="loginForm" action="${login}">
+            <ul>
+                <li><form:errors path="username"/></li>
+                <li><form:errors path="password"/></li>
+            </ul>
             <form:label path="username" cssClass="left">
-                <spring:message code="field.registerForm.username"/>&nbsp;
-                <form:errors path="username"/>
-            </form:label>
+                <spring:message code="field.registerForm.username"/>
+                 </form:label>
             <form:input path="username" cssClass="right"/><br/><br/>
 
             <form:label path="password" cssClass="left">
-                <spring:message code="field.registerForm.password"/>&nbsp;
-                <form:errors path="password"/>
-            </form:label>
+                <spring:message code="field.registerForm.password"/>
+               </form:label>
             <form:password path="password" cssClass="right"/><br/><br/>
 
             <input type="submit" value="Login" class="clear"/>
