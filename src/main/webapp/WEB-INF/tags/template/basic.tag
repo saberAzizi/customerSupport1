@@ -9,7 +9,7 @@
                 <li><a href="<c:url value="/ticket/list"/> ">List Tickets</a></li>
                 <li><a href="#">Search Ticket</a></li>
                 <li><a href="<c:url value="/ticket/createTicket"/> ">Create Ticket</a></li>
-                <li><a href="#">logout</a></li>
+                <li><a href="<c:url value="/logout"/> ">logout</a></li>
             </ul>
         </nav>
     </jsp:attribute>

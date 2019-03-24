@@ -7,11 +7,13 @@ import com.saber.site.model.UserPrincipal;
 import com.saber.site.repositories.SearchResult;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+
+import java.security.Principal;
 import java.util.List;
 
 public interface TicketService {
     Page<TicketComment> getComments(MyTicket ticket,Pageable pageable);
-    void saveTicketComment(TicketComment ticketComment ,MyTicket ticket);
+    void saveTicketComment(TicketComment ticketComment , MyTicket ticket, Principal principal);
     ///-------------------------------------------------
     Page<SearchResult<MyTicket>> search(String query,Pageable pageable);
     List<MyTicket> getTickets(long userId);
@@ -19,4 +21,5 @@ public interface TicketService {
     MyTicket getTicket(long ticketId);
     //----------------------------------------------------
     Attachment findAttachment(long attachmentId);
+    UserPrincipal findUserByUsername(String username);
 }
