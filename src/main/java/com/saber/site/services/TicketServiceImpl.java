@@ -82,7 +82,8 @@ public class TicketServiceImpl implements TicketService {
         if (ticket.getId()<1){
            ticket.setDateCreated(new Date());
         }
-        this.ticketRepository.save(ticket);
+         this.ticketRepository.save(ticket);
+
     }
 
     @Override
@@ -97,11 +98,5 @@ public class TicketServiceImpl implements TicketService {
     public Attachment findAttachment(long attachmentId) {
         Optional<Attachment> attachmentOptional = this.attachmentRepository.findById(attachmentId);
         return attachmentOptional.orElse(null);
-    }
-
-    @Override
-    @Transactional
-    public UserPrincipal findByUserPrincipal(String username) {
-        return this.userRepository.findByUsername(username);
     }
 }

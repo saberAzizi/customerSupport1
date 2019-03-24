@@ -7,7 +7,7 @@
 
     <error-page>
         <exception-type>java.lang.Exception</exception-type>
-        <location>/errorHandler</location>
+        <location>/WEB-INF/jsp/view/error.jsp</location>
     </error-page>
 
     <jsp-config>
