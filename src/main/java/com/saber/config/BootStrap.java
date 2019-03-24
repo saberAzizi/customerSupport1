@@ -28,6 +28,6 @@ public class BootStrap implements WebApplicationInitializer {
 
         FilterRegistration filterRegistration = servletContainer.addFilter("authenticationFilter",new AuthenticationFilter());
 
-        filterRegistration.addMappingForServletNames(null,false,"/ticket","/ticket/*");
+        filterRegistration.addMappingForUrlPatterns(null,false,"/ticket","/ticket/*");
     }
 }

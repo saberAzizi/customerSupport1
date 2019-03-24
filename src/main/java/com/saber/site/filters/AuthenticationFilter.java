@@ -24,12 +24,12 @@ public class AuthenticationFilter implements Filter {
         HttpServletResponse response= (HttpServletResponse) servletResponse;
         HttpSession session = request.getSession();
 
-        Principal principal = UserPrincipal.getPrincipal(session);
+          Principal principal = UserPrincipal.getPrincipal(session);
         if (principal==null){
             response.sendRedirect(request.getContextPath()+"/login");
         }
         else{
-            filterChain.doFilter(new HttpServletRequestWrapper(request){
+           filterChain.doFilter(new HttpServletRequestWrapper(request){
                 @Override
                 public Principal getUserPrincipal() {
                     return principal;
